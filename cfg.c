@@ -56,8 +56,8 @@ BOOL CALLBACK AboutProc(HWND hWndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		hCursor=LoadCursor(NULL, IDC_HAND); // Windows 98/Me, Windows 2000/XP: Hand
 		if(!hCursor)
 			hCursor=LoadCursor(hInstance, MAKEINTRESOURCE(IDC_MY_HAND));
-		SetClassLong(GetDlgItem(hWndDlg, IDC_STATIC_MAIL), GCL_HCURSOR, (LPARAM)hCursor);
-		SetClassLong(GetDlgItem(hWndDlg, IDC_STATIC_URL), GCL_HCURSOR, (LPARAM)hCursor);
+		//SetClassLong(GetDlgItem(hWndDlg, IDC_STATIC_MAIL), GCL_HCURSOR, (LPARAM)hCursor);
+		//SetClassLong(GetDlgItem(hWndDlg, IDC_STATIC_URL), GCL_HCURSOR, (LPARAM)hCursor);
 		return TRUE;
 	case WM_CTLCOLORSTATIC:
 		switch(GetDlgCtrlID((HWND)lParam))
