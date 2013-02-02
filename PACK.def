@@ -1,0 +1,13 @@
+; (c) Copyright 2001 by DarkOne
+
+EXPORTS
+	OpenArchive
+	ReadHeader
+	ProcessFile
+	CloseArchive
+	SetChangeVolProc
+	SetProcessDataProc
+	GetPackerCaps
+	PackFiles
+	DeleteFiles
+	ConfigurePacker
