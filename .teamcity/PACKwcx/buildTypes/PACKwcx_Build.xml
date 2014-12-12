@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d34e2c5c-51cd-4627-bce8-aa540bf91bbb" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>Build</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_2" name="" type="VS.Solution">
+        <parameters>
+          <param name="build-file-path" value="PACKwcx.sln" />
+          <param name="msbuild.prop.Configuration" value="Release" />
+          <param name="msbuild_version" value="12.0" />
+          <param name="targets" value="Rebuild" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="toolsVersion" value="12.0" />
+          <param name="vs.version" value="vs2013" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="PACKwcx_HttpsGithubComPavuucekPACKwcxGitRefsHeadsMaster" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="branchFilter" value="+:*" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="teamcity.github.status">
+        <parameters>
+          <param name="github_report_on" value="on finish" />
+          <param name="guthub_authentication_type" value="password" />
+          <param name="guthub_host" value="https://api.github.com" />
+          <param name="guthub_owner" value="pavuucek" />
+          <param name="guthub_repo" value="PACKwcx" />
+          <param name="guthub_username" value="michal.kuncl@gmail.com" />
+          <param name="secure:guthub_username" value="zxx6e1e9802cd9b51b9775d03cbe80d301b" />
+        </parameters>
+      </extension>
+      <extension id="perfmon" type="perfmon">
+        <parameters />
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+
