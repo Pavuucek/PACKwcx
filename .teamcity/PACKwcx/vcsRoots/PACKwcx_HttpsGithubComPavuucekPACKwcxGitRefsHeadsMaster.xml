@@ -9,8 +9,15 @@
   <param name="reportTagRevisions" value="true" />
   <param name="secure:password" value="zxx6e1e9802cd9b51b9775d03cbe80d301b" />
   <param name="submoduleCheckout" value="CHECKOUT" />
-  <param name="teamcity:branchSpec"><![CDATA[+:refs/pull/(*/head)
-+:refs/heads/(*)]]></param>
+  <param name="teamcity:branchSpec"><![CDATA[-:refs/heads/gh-pages
++:refs/(pull/*)
++:refs/heads/(develop)
++:refs/heads/(feature/*)
++:refs/heads/(hotfix/*)
++:refs/heads/(master)
++:refs/heads/(release)
++:refs/heads/(support/*)
++:refs/heads/*]]></param>
   <param name="url" value="https://github.com/Pavuucek/PACKwcx.git" />
   <param name="userForTags" value="Michal Kuncl &lt;michal.kuncl@gmail.com&gt;" />
   <param name="username" value="michal.kuncl@gmail.com" />
